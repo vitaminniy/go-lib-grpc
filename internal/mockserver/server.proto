@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/vitaminniy/go-lib-grpc/internal/mockserver";
+
+package mockserver;
+
+message Request {
+	string id = 1;
+}
+
+message Response {
+	string id = 1;
+}
+
+service Sample {
+	rpc GetResponse(Request) returns (Response) {}
+}
+
